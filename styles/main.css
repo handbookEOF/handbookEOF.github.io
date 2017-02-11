@@ -1,0 +1,48 @@
+body {
+	background-image: url('../res/8.jpg');
+	background-position: center;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-family: courier, monospace;
+}
+
+#extras-space {
+	min-height: 250px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    color: #8b8b8b;
+    background-color: #eeeeee;
+    opacity: 0.6;
+    font-size: 22px;
+}
+
+.nav-pills > li > a {
+	color: #eeeeee;
+	font-size: 18px;
+}
+
+.nav-pills > li > a:hover, .nav-pills > li > a:focus {
+	color: #8b8b8b;
+	font-size: 22px;
+	transition: all 0.3s;
+}
+
+.nav-pills > li > a:hover {
+	opacity: 0.8;
+}
+
+.nav-pills > li > a:focus {
+	opacity: 0.6;
+}
+
+#me {
+	background-color: black;
+	background: ;
+	min-height: 80px;
+	font-family: courier, monospace;
+	font-weight: bold;
+	font-size: 70px;
+	text-align: center;
+}
