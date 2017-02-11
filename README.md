@@ -1,1 +1,0 @@
-# handbookEOF.github.io
