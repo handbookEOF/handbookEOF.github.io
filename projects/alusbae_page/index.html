@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href="logo.png"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>ALUSBAE CIPTA SOLUSI</title>
+	
+	<style>
+		html, body {
+			width: 100%;
+			margin: 0;
+			overflow-x: hidden;
+		}
+		.row {
+		}
+		.col-sm-12 {
+			
+		}
+		
+		
+		.container {
+			padding: 0;
+		}
+		
+		/** .wrapper-head{
+			position: relative;
+			height: 30em;
+			background-color: #3fb0e8;
+		} 
+		
+		.wrapper-head #townhouette{
+			position: absolute;
+			bottom: 0;
+		} */
+		
+		.shadow {
+			border-radius: 100%;
+			background-color: #000;
+			height: 0.5em;
+			width: 7em;
+			position: static;
+			filter: blur(1em);
+			margin-top: 2em !important;
+			animation: shrink 2s ease-in-out alternate infinite;
+		}
+		
+		.acis-floats {
+			position: relative;
+			top: 0;
+			min-height: 5em;
+			animation: floats 2s ease-in-out alternate infinite;
+		}
+		
+		
+		.materials-floats {
+			position: relative;
+			top: 0;
+			animation: floats 3s ease-in-out alternate infinite;
+		}
+		
+		.media img {
+			height: 10em;
+			width: 10em;
+			background-color: #333;
+		}
+		
+		@keyframes shrink {
+			0%{height: 0.5em;
+			width: 7em;}
+			100%{height: 0.8em;
+			width: 8em;}
+		}
+		
+		@keyframes floats {
+			0%{top: 0;}
+			100%{top: 10px;}
+		}
+		
+		#contact input,
+		#contact textarea {
+			background-color: #1896d8;
+			border-color: transparent;
+			color: #fff;
+		}
+		
+		#contact input::placeholder,
+		#contact textarea::placeholder {
+			background-color: #1896d8;
+			border-color: transparent;
+			color: #ddd;
+		}
+		
+		#contact small { color: #ddd !important; }
+		
+		#product .media {
+			display: inline-block !important;
+			max-width: 25%;
+			margin: auto !important;
+		}
+		
+		#wrapper-head{
+			position: relative;
+			height: 30em;
+			background-color: #3fb0e8;
+		}
+		
+		#wrapper-head * {
+			color: #fff;
+		}
+		
+		#wrapper-foot {
+			background-color: #2d3f48;
+		}
+		
+		#wrapper-foot * {
+			color: #fff;
+		}
+		
+		.wrapper-blue {
+			background-color: #3fb0e8;
+			color: #fff !important;
+		}
+		
+		.wrapper-black {
+			background-color: #2d3f48;
+			color: #fff !important;
+		}
+		
+		#townhouette img {
+			max-height: 20em;
+		}
+		
+		
+		#townhouette { 
+			position: absolute;
+			bottom: 0;
+			background-image: url(townhouette.png);
+			background-size: contain;
+			height: 20em;
+			width: 100%;
+		}
+		
+		#product h1,
+		#service h1,
+		#partner h1 { color: #3fb0e8;}
+		
+		list-group {
+		  margin: 2em 0;
+		}
+
+		.list-group-item {
+		  margin: 1em;
+		  margin-left: 3em;
+		  border-color: transparent;
+		}
+
+		.list-group-item:before {
+		  content: '\f085' !important;
+		  font-family: 'FontAwesome';
+		  font-size: 3em;
+		  float: left;
+		  margin-left: -1.5em;
+		  color: #3fb0e8;
+		}
+			
+		@media (max-width: 1366px) {
+			
+		}
+
+	</style>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/9f865de1f2.js"></script>
+	
+	<div id='wrapper-head'>
+		<div id='townhouette' class='d-block'>
+		</div>
+		<div class='container'>
+			<div class='row mb-5'>
+				<div class='col-lg-12'>
+					<nav class="navbar navbar-expand-lg">
+					  <a class="navbar-brand" href="#">Lorem Ipsum</a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+						  <li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						  </li>
+						  <li class="nav-item dropdown">
+							<a class="nav-link" href="#">Link</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">Disabled</a>
+						  </li>
+						</ul>
+						<a class="navbar-brand" href="#"><img src='logo.png'/></a>
+					  </div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class='container'>
+		<div class='row'>
+			<div class='col-lg-12'>
+				<div class='row my-5'>
+					<div class='col-lg-6 text-justify'>
+						<h1 class='text-center'>Description</h1>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc metus. Pellentesque et arcu. Duis sem velit, ultrices et, fermentum auctor, rhoncus ut, ligula. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Aliquam sed erat. Mauris tincidunt aliquam ante. 
+
+					</div>
+					<div class='col-lg-6 text-center'>
+						<img class='acis-floats' src='logo.png'/>
+						<div class='d-block m-auto shadow'></div>
+					</div>
+				</div>
+				<div class='row my-5'>
+					<div class='col-lg-6 text-center'>
+						<img class='materials-floats' src='materials.png'/>
+					</div>
+					<div class='col-lg-6 text-justify'>
+						<h1 class='text-center'>About Us</h1>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc metus. Pellentesque et arcu. Duis sem velit, ultrices et, fermentum auctor, rhoncus ut, ligula. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Aliquam sed erat. Mauris tincidunt aliquam ante. 
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='experience' class='wrapper-blue'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-lg-12 text-justify my-5'>
+					<h1 class='text-center'>Experience</h1>
+					<h1 class='text-center'><i class="fa fa-trophy" aria-hidden="true"></i></h1>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc metus. Pellentesque et arcu. Duis sem velit, ultrices et, fermentum auctor, rhoncus ut, ligula. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Aliquam sed erat. Mauris tincidunt aliquam ante. 
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc metus. Pellentesque et arcu. Duis sem velit, ultrices et, fermentum auctor, rhoncus ut, ligula. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Aliquam sed erat. Mauris tincidunt aliquam ante. 
+					<img class='d-block mx-auto' src='Screenshot%20from%202018-01-29%2005-42-58.png'/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='product'>
+		<div class='container'>
+			<div class='row my-5'>
+				<div class='col-lg-12 text-center'>
+					<h1>Product</h1>
+					<h1><i class="fa fa-cube" aria-hidden="true"></i></h1>
+					<div class="media">
+					  <img class="align-self-center mr-3" src="Screenshot%20from%202018-01-29%2005-56-55.png" alt="Generic placeholder image">
+					  <div class="media-body">
+						<h5 class="mt-0">Center-aligned media</h5>
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+						<p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					  </div>
+					</div>
+					<div class="media">
+					  <img class="align-self-center mr-3" src="Screenshot%20from%202018-01-29%2005-56-55.png" alt="Generic placeholder image">
+					  <div class="media-body">
+						<h5 class="mt-0">Center-aligned media</h5>
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+						<p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					  </div>
+					</div>
+					<div class="media">
+					  <img class="align-self-center mr-3" src="Screenshot%20from%202018-01-29%2005-56-55.png" alt="Generic placeholder image">
+					  <div class="media-body">
+						<h5 class="mt-0">Center-aligned media</h5>
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+						<p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='service'>
+		<div class='container'>
+			<div class='row my-5'>
+				<div class='col-lg-12 text-center'>
+					<h1>Service</h1>
+					<h1><i class="fa fa-tachometer" aria-hidden="true"></i></h1>
+					<div class='row'>
+						<div class='col-sm-6'>
+							<ul class="list-group">
+							  <li class="list-group-item text-justify"> 
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+									<small>3 days ago</small>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+								<small>Donec id elit non mi porta.</small>
+							  </li>
+							  <li class="list-group-item text-justify"> 
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+									<small>3 days ago</small>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+								<small>Donec id elit non mi porta.</small>
+							  </li>
+							  <li class="list-group-item text-justify"> 
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+									<small>3 days ago</small>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+								<small>Donec id elit non mi porta.</small>
+							  </li>
+							</ul>
+						</div>
+						<div class='col-sm-6'>
+							<ul class="list-group">
+							  <li class="list-group-item text-justify"> 
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+									<small>3 days ago</small>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+								<small>Donec id elit non mi porta.</small>
+							  </li>
+							  <li class="list-group-item text-justify"> 
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+									<small>3 days ago</small>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+								<small>Donec id elit non mi porta.</small>
+							  </li>
+							  <li class="list-group-item text-justify"> 
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+									<small>3 days ago</small>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+								<small>Donec id elit non mi porta.</small>
+							  </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='partner'>
+		<div class='container'>
+			<div class='row my-5'>
+				<div class='col-lg-12 text-center'>
+					<h1>Partner</h1>
+					<h1><i class="fa fa-handshake" aria-hidden="true"></i></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class='wrapper-black'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-lg-12 text-center my-5'>
+					<h1>Value</h1>
+					<img src='value.png'/>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='contact' class='wrapper-blue'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-lg-12'>
+					<div class='row my-5'>
+						<div class='col-lg-4'>
+							<h1><i class="fa fa-id-card" aria-hidden="true"></i> Contact</h1>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc metus. Pellentesque et arcu. Duis sem velit, ultrices et, fermentum auctor, rhoncus ut, ligula. Nam nisl quam, posuere non, volutpat sed, semper vitae, magna. Aliquam sed erat. Mauris tincidunt aliquam ante. 
+							<form>
+							  <div class="form-group">
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+								<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+							  </div>
+							  <div class="form-group">
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							  </div>
+							  <div class="form-group">
+								<input class="form-control" type="text" placeholder="Default input">
+							  </div>
+							  <div class="form-group">
+								<textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+							  </div>
+							  <div class="form-group">
+								<input class="form-control" type="text" placeholder="Default input">
+							  </div>
+							  <button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id='wrapper-foot'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-lg-12'>
+					<nav class="navbar navbar-expand-lg">
+					  <a class="navbar-brand" href="#">&copy;2018 PT ALUSBAE CIPTA SOLUSI</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+
