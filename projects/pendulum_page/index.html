@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" type="image/png" href="pendulum-favicon.png"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css' />
+	<title>Pendulum Media</title>
+	
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Neuton');
+		
+		body {
+			transition: background-color .5s;
+		}
+		
+		.pend-body,
+		.pend-magazine {
+			font-family: Times;
+		}
+		
+		.pend-footer-nav > .nav > .nav-item > a, 
+		.pend-nav > .nav > .nav-item > a, 
+		.pend-cat > .nav > .nav-item > a, 
+		.pend-nav > .nav > .nav-item > a, 
+		.pend-nav,
+		.pend-title {
+			font-family: 'Neuton', serif;
+			color: #212529;
+		}
+		
+		html, body, .container-fluid{
+			width: 100%;
+			margin: 0;
+		}
+		
+		.pend-body {
+			margin-top: 1em;
+			margin-bottom: 5em;
+		}
+		
+		.pend-body h3,
+		.pend-magazine h3{
+			color: #000;
+			font-weight: bold;
+		}
+		
+		.pend-body img{
+		}
+		
+		.pend-caption {
+			border-left-style: solid;
+			border-left-width: 0.3em;
+			border-left-color: #aaa;
+			padding-left: 0.5em;
+		}
+		
+		.pend-cat {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+		
+		.pend-doddle {
+			padding-top: 0.3em;
+			padding-bottom: 0.3em;
+			border-top-style: solid;
+			border-bottom-style: solid;
+			border-width: 0.05em;
+			border-color: #aaa;
+		}
+			
+		.pend-doddle img{
+			width: 480px;
+		}
+		
+		.pend-footer {
+			margin-bottom: 2em;
+			border-top-style: double;
+			border-top-width: 0.2em;
+			border-top-color: #aaa;
+		}
+		
+		.pend-footer-nav {
+			padding-top: 1em;
+		}
+		
+		.pend-header{ 
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+		
+		.pend-header img{
+			width: 320px;
+		}
+		
+		.pend-layout {
+			margin-right: 10em;
+			margin-left: 10em;
+		}
+		
+		.pend-magazine { 
+			width: 90%;
+			margin-bottom: 5em;
+		}
+		
+		.pend-magazine .figure { 
+			width: 480px;
+			margin-right: 2em;
+			margin-bottom: 2em;
+		}
+		
+		.pend-nav{ 
+			margin-top: 1.5em;
+			margin-bottom: 1.5em;
+		}
+		
+		.pend-snippet, 
+		.oi-magnifying-glass{
+			color: #212529;
+		}
+		
+		.pend-title{}
+		
+		.pend-contact {
+			margin-left: 1em;
+			margin-right: 1em;
+		}
+		
+		.pend-contact img{
+			width: 30px;
+		}
+		
+		.pend-contacts{
+			width: 100%;
+			margin: auto;
+			margin-top: 2em;
+		}
+		
+		.pend-contacts > ul {
+			padding: 0;
+			list-style-type: none;
+			margin: auto;
+			text-align: center;
+			width: 50%;
+		}
+		
+		.pend-contacts > ul > li {
+			display: inline-block;
+			margin: auto;
+		}
+		
+		
+		
+		
+		.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+	</style>
+	
+	<script type='text/javascript'>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.body.style.backgroundColor = "white";
+		}
+	</script>
+</head>
+
+<body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="#">About</a>
+	  <a href="#">Services</a>
+	  <a href="#">Clients</a>
+	  <a href="#">Contact</a>
+	</div>
+	
+	
+	<div class='container-fluid'>
+		<div class="pend-layout">
+			<div class='row'>
+				<div class='col-sm-12 pend-header'>
+					<img class='mx-auto d-block' src='pend-header-logo.png'/>
+				</div>
+			</div>
+		
+			
+			
+			<div class='row'>
+				<div class='col-sm-12 pend-nav'>
+					<ul class="nav justify-content-center">
+						<li class="nav-item">
+							<a class="nav-link active" href="#" onclick="openNav()"><span class="oi oi-menu"></span></span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">download</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">archive</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">blog</a>
+						</li>
+						<li>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<div class="btn-group" role="group">
+										<button class="btn btn-light" type="button"><span class="oi oi-magnifying-glass"></span></button>
+									</div>
+								</div>
+								<input type="text" class="form-control" placeholder="Search for...">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class='row'>
+				<div class='col-sm-12 pend-doddle'>
+					<img class='mx-auto d-block' src='doddle.png'/>
+				</div>
+			</div>
+			
+			<div class='row'>
+				<div class='col-sm-12'>
+					<div class="pend-body media mx-auto d-block">
+						<figure class="figure">
+							<img src="postimg.png" class="figure-img img-fluid img-thumbnail rounded" alt="A generic square placeholder image with rounded corners in a figure."/>
+							<figcaption class="figure-caption pend-caption">Category | 08:00 am</figcaption>
+						</figure>
+						<div class="media-body pend-snippet">
+							<h3 class="mt-0">Media heading</h3>
+							<div class="mb-0">
+								Lorem ipsum dolor sit amet, meliore salutatus qui no. Summo mundi ea vim, ne usu splendide scriptorem. Saperet accusam eu pri, ne pri semper eruditi dolorum. Menandri assueverit et sed, ut expetenda theophrastus vel. Vis ut nibh vivendo, usu nisl doming indoctum ex.
+			Lorem cetero argumentum an mea. Usu commune quaestio reformidans id, an nec consetetur intellegam. Reque option iracundia duo ne, est at elitr pertinax reformidans. Nam aliquid mediocrem disputando te. In assentior vituperatoribus sed.
+			Pri rebum argumentum no. His falli legendos imperdiet ei, equidem suscipit id est. Vix te animal disputationi. Ut graeci putant singulis eum, pri gubergren cotidieque eu. Ad vis vide similique, qui cu admodum corpora hendrerit, est ei alii mundi.
+							</div>
+						</div>					
+					</div>
+				</div>
+			</div>
+			
+			<div class='row'>
+				<div class='col-sm-12'>
+					<div class="pend-magazine media mx-auto">
+						<figure class="figure">
+							<img class="figure-img img-fluid img-thumbnail rounded mr-3" src="magz.png" alt="Generic placeholder image">
+							<figcaption class="figure-caption pend-caption">Category | 08:00 am</figcaption>
+						</figure>
+						<div class="media-body">
+							<h3 class="mt-0">Media heading</h3>
+							<div class="mb-0">Lorem ipsum dolor sit amet, meliore salutatus qui no. Summo mundi ea vim, ne usu splendide scriptorem. Saperet accusam eu pri, ne pri semper eruditi dolorum. Menandri assueverit et sed, ut expetenda theophrastus vel. Vis ut nibh vivendo, usu nisl doming indoctum ex.
+						Lorem cetero argumentum an mea. Usu commune quaestio reformidans id, an nec consetetur intellegam. Reque option iracundia duo ne, est at elitr pertinax reformidans. Nam aliquid mediocrem disputando te. In assentior vituperatoribus sed.
+						Pri rebum argumentum no. His falli legendos imperdiet ei, equidem suscipit id est. Vix te animal disputationi. Ut graeci putant singulis eum, pri gubergren cotidieque eu. Ad vis vide similique, qui cu admodum corpora hendrerit, est ei alii mundi.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+				
+			<div class='row'>
+				<div class='col-sm-12 pend-footer'>
+					<div class='pend-footer-nav'>
+						<ul class="nav justify-content-center">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">download</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">archive</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="#">blog</a>
+							</li>
+						</ul>
+					</div>
+					<div class='pend-cat'>
+						<ul class="nav justify-content-center">
+							<li class="nav-item">
+								<a class="nav-link" href="#">category1</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">category2</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">category3</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">category4</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">category5</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">category6</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">category7</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">category8</a>
+							</li>
+						</ul>
+					</div>
+					<div class='pend-contacts'>
+						<ul>
+							<li><div class='pend-contact'><img src='twitter.png' /></div></li>
+							<li><div class='pend-contact'><img src='pend-foot.png' /></div></li>
+							<li><div class='pend-contact'><img src='insta.png' /></div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
